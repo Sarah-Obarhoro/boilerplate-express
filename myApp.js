@@ -14,10 +14,10 @@ app.use("/public", express.static( __dirname + "/public"));
 
 app.get("/json", function (req, res) {
   res.json({ message: "Hello json" });
-  if (process.env.VAR_NAME === "allCaps") {
-    response = "Hello World".toUpperCase();
+  if (process.env.MESSAGE_STYLE === "allCaps") {
+    response = "Hello json".toUpperCase();
   } else {
-    response = "Hello World";
+    response = "Hello json";
   }
 });
 
