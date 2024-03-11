@@ -13,8 +13,8 @@ app.get("/", function (req, res) {
 app.use("/public", express.static( __dirname + "/public"));
 
 app.get("/json", function (req, res) {
-  if (process.env.MESSAGE_STYLE === "uppercase") {
-    res.json({ message: "HELLO JSON" });
+  if (process.env.MESSAGE_STYLE == "uppercase") {
+    res.json({ message: "Hello json".toUpperCase() });
   } else {
     res.json({ message: "Hello json" });
   }
@@ -26,32 +26,4 @@ app.get("/json", function (req, res) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- module.exports = app;
+module.exports = app;
